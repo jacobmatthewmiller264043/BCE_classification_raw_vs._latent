@@ -20,10 +20,11 @@ because in this approach the latent representation is not impacted by the result
 
 ## Summarized Results
 
-We are able to obtain 99.61% accuracy with the raw feature classifier. For the latent space classifier trained with simultaneous optimization, the accuracy roughly increases as we increase
-the latent space dimension, from 92.36% accuracy at a 10 dimensional latent space to 99.51% accuracy with a 30 dimensional latent space. However, we obtain the same ~100% classification
-accuracy with a 20 dimensional latent space representation, indicating that transformation of the data is only neccessary onto a 20 dimensional space, a slight reduction in dimensionality
-from the raw features. Classification degrades significantly using the transformed features from the VAE trained without respect to classification, dropping to roughly 58% accuracy. This is
+We are able to obtain 98.05% accuracy with the raw feature classifier. For the latent space classifier trained with simultaneous optimization, the accuracy increases as we increase
+the latent space dimension, from 91.54% accuracy at a 10 dimensional latent space to 99.51% accuracy with a 30 dimensional latent space. Further, we obtain the same 99.51% classification
+accuracy with a 25 dimensional latent space representation, and a slight reduction to 99.02% accuracy at a 20 dimensional latent space. We observe that there is a slight improvement in accuracy obtained from transformation onto latent space in 20 dimensions relative to raw features, despite this being a reduction in the dimensionality of the raw features. 
+
+Classification degrades significantly using the transformed features from the VAE trained without respect to classification, dropping to roughly 72% accuracy. This is
 likely due to the inability for the variational autoencoder to learn an effective latent space representation on account of the small number of examples in the dataset (VAE typically requires
 a high sample size to learn effectively). 
 
